@@ -1,0 +1,283 @@
+/* 공통 */
+.section_title {
+  position: absolute;
+  top: 200px;
+  left: 0;
+  transform: rotate(-90deg);
+  font-size: 10px;
+}
+
+a {
+  text-decoration: none;
+  color: #111;
+}
+
+.section_title:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: -20px;
+  width: 15px;
+  height: 1px;
+  background: #111;
+}
+
+/* 메인비주얼 */
+.main_visual_section {
+  position: relative;
+  margin-top: 78px;
+}
+
+.main_visual_inner {
+  box-sizing: border-box;
+  position: relative;
+  min-height: 31.25rem;
+  padding: 3.75rem;
+}
+
+.background_video_wrapper {
+  overflow: hidden;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  bottom: 0px;
+  width: 100%;
+  height: 55vh;
+  min-height: 31.25rem;
+  background: rgb(7, 18, 26);
+}
+
+.background_video {
+  width: 100%;
+  height: 100%;
+  background: rgb(7, 18, 26);
+}
+
+.main_video_wrapper {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  max-width: 105rem;
+  height: 55vh;
+  min-height: 31.25rem;
+  margin: 0 auto;
+}
+
+.main_video {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  background: rgb(7, 18, 26);
+}
+
+.main_visual_canvas_area {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.logo_area {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+}
+
+.main_btn_area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.main_logo {
+  display: inline-block;
+  position: relative;
+  width: 40vw;
+  height: calc(17.6333vw);
+  max-width: 37.5rem;
+  max-height: 16.5312rem;
+}
+
+.main_logo img {
+  width: 100%;
+}
+
+.main_btn {
+  min-width: 156px;
+  height: 56px;
+  background: rgb(11, 198, 227);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #111;
+  font-weight: 600;
+  font-size: 13px;
+  text-decoration: none;
+}
+
+/* 뉴스 */
+.news_section {
+  position: relative;
+  margin-top: -7.5rem;
+  padding-top: 7.5rem;
+  padding-bottom: 3.75rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: url("../images/newsBg.png") left top repeat-x rgb(247, 247, 247);
+}
+
+.news_container {
+  max-width: 1560px;
+  height: 200px;
+}
+
+.news_inner {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+}
+
+.news_area {
+  width: 30%;
+}
+
+.news_area article {
+  display: flex;
+
+  padding: 10px 0;
+  width: 100%;
+  height: 100%;
+}
+
+.news {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.news .img_area {
+  flex-shrink: 0;
+  width: 145px;
+  height: 90%;
+  overflow: hidden;
+}
+
+.news .category {
+  font-size: 10px;
+  color: #aaa;
+  font-weight: 800;
+  margin-bottom: 15px;
+}
+
+.news h3 {
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+
+.news .sub_text {
+  font-size: 12px;
+}
+
+.news .content_area {
+  padding: 0 10px;
+}
+
+.news_canvas_area {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.all_area {
+  max-width: 1560px;
+  width: 100%;
+  display: flex;
+  justify-content: end;
+}
+
+.all_area .all {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.all_area .all_text {
+  flex-shrink: 0;
+  font-size: 12px;
+  font-weight: 600;
+  color: #333;
+  margin-right: 5px;
+}
+
+.all_area .all_arrow {
+  display: block;
+  width: 16px;
+  height: 16px;
+  fill: rgb(11, 198, 227);
+  transition: all 0.5s;
+}
+
+.all_area .all:hover .all_arrow {
+  transform: translateX(6px);
+}
+
+/* 소셜 */
+.social_section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 50px 0;
+}
+
+.social_container {
+  max-width: 1560px;
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #333;
+  color: #f1f1f1;
+}
+
+.social_container p {
+  position: relative;
+  margin-right: 50px;
+  font-size: 18px;
+  font-weight: 600;
+}
+.social_container p:after {
+  content: "";
+  width: 1px;
+  height: 100%;
+  background: #f1f1f1;
+  position: absolute;
+  top: 0;
+  right: -25px;
+}
+
+.social_icon {
+  width: 30px;
+  height: 24px;
+  fill: #f1f1f1;
+}
+
+.social_icon svg {
+  height: 100%;
+}
+
+.social_container .social_icon:first-child {
+  width: 10px;
+  fill: red;
+}
