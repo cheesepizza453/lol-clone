@@ -584,6 +584,7 @@ a {
   position: relative;
   padding: 140px 0px 15vw;
   background: #111;
+  overflow: hidden;
 }
 
 .skin_section:before {
@@ -614,25 +615,26 @@ a {
 .skin_bg .bg_left {
   position: absolute;
   top: 0;
-  left: 0;
+  left: -1%;
   width: 100%;
-
   z-index: 2;
+  transition: 0.5s ease-in-out;
 }
 
 .skin_bg .bg_left img {
-  width: 100%;
+  width: 102%;
 }
 
 .skin_bg .bg_right {
   position: absolute;
   top: 0;
-  left: 0;
+  left: 1%;
   width: 100%;
+  transition: 0.5s ease-in-out;
 }
 
 .skin_bg .bg_right img {
-  width: 100%;
+  width: 102%;
 }
 
 .skin_cha_container {
@@ -654,6 +656,7 @@ a {
   height: 45vw;
   max-width: 750px;
   max-height: 750px;
+  transition: 0.5s ease-in-out;
 }
 
 .skin_cha img {
@@ -671,6 +674,11 @@ a {
   z-index: 1;
   width: 35vw;
   margin-top: 0px;
+  transition: 0.5s ease-in-out;
+}
+
+.skin_cha_area {
+  transition: 0.5s ease-in-out;
 }
 
 /* 플레이 */
@@ -755,17 +763,74 @@ a {
   height: 520px;
 }
 
-.play_video_wrapper .play_video_area {
+.video_border_area {
+  position: absolute;
+}
+
+.video_border_effect {
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  stroke-width: 5px;
+  fill: none;
+  stroke: rgba(255, 255, 255, 0.1);
+  top: -40px;
+  left: -40px;
+  stroke-dashoffset: 100;
+  stroke-dasharray: 3;
+}
+
+.border_rotate_effet {
+  animation: borderRotate 80s infinite linear both;
+}
+
+@keyframes borderRotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.video_line_effect {
+  position: absolute;
+  width: 540px;
+  height: 540px;
+  stroke-width: 1px;
+  fill: none;
+  stroke: #ca9e52;
+  top: -10px;
+  left: -10px;
+  stroke-dashoffset: 3300;
+  animation: lineEffect 6s infinite;
+}
+
+@keyframes lineEffect {
+  0% {
+    stroke-dasharray: 700;
+  }
+  100% {
+    stroke-dasharray: 1650;
+  }
+}
+
+.video_line_effect .play_video_wrapper .play_video_area {
   width: 100%;
   height: 100%;
 }
 
+.play_video_area {
+  width: 100%;
+  height: 100%;
+}
 .play_video_wrapper .play_video {
   width: 100%;
   height: 100%;
   border-radius: 100%;
   overflow: hidden;
   display: none;
+  border: 1px solid #eee;
 }
 
 .play_video_wrapper .play_video.on {
@@ -801,6 +866,7 @@ a {
 .play_list_container {
   transform: translateY(100px);
 }
+
 .play_list {
   position: relative;
   width: 100%;
@@ -909,6 +975,7 @@ a {
 .map_img_area {
   width: 60vw;
   margin-left: -10vw;
+  transition: 0.3s ease-in-out;
 }
 
 .map_img_area img {
