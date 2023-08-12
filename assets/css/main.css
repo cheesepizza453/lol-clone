@@ -981,3 +981,72 @@ a {
 .map_img_area img {
   width: 100%;
 }
+
+/* 더 자세히 알아보기 */
+.more_info_section {
+  padding: 80px 0;
+  background: url("../images/newsBg.png") left top repeat-x rgb(247, 247, 247);
+}
+
+.more_info_container {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 50px;
+}
+
+.more_info_area {
+  display: flex;
+  max-width: 960px;
+  width: 100%;
+}
+
+.more_info_list {
+  display: flex;
+  flex-basis: 48%;
+  max-width: 460px;
+  margin-left: 10px;
+  margin-right: 10px;
+  background: #f1f1f1;
+}
+
+.more_info_list article {
+  width: 100%;
+}
+
+.more_info {
+  position: relative;
+}
+
+.more_info_canvas_area {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.more_info .img_area {
+  width: 100%;
+  padding-top: 56.25%;
+  position: relative;
+  overflow: hidden;
+}
+
+.more_info .img_area img {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.more_info .text_area {
+  position: relative;
+  font-size: 30px;
+  font-weight: 600;
+  padding: 15%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow-wrap: break-word;
+  word-break: keep-all;
+}
